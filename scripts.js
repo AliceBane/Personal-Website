@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const helloWorldText = "Hello world,";
     const aliceText = "Alice";
-    const hereText = " here.";
+    const hereText = "\u00A0here.";
     const helloWorldElement = document.getElementById('hello-world');
     const aliceHereElement = document.getElementById('alice-here');
     const andHereElement = document.getElementById('and-here');
