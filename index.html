@@ -13,16 +13,21 @@
 </head>
 <body>
     <!---------- Nav bar ---------->
-    <i class="bx bx-menu" id="menu-icon"></i>
-    <nav>
-        <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="CV-button">
+            <span>Download CV</span>
+        </div>
+    </div>
 
     <!---------- Home ---------->
     <section class="home" id="home">
@@ -38,7 +43,7 @@
             </span>
             <div class="buttons-container">
                 <div class="CV-button">
-                    <span>Download CV</span>
+                    <span>Download CV </span><!--<i class='bx bx-download'></i>-->
                 </div>
                 <div class="social-icons">
                     <a href="#">
@@ -61,14 +66,14 @@
     <!---------- About section ---------->
     <section class="about" id="about">
         <h2 class="section-title">
-            <div class="section-text">/ About</div>
+            <div class="section-text">/ About me</div>
             <div class="line"></div>
         </h2>
         <ul class="facts">
             <li><i class='bx bx-chevron-right'></i><div class="point">I am an aspiring 
                 <span class="highlight">software engineer</span> 
                 based in Pocatello, Idaho, with a Bachelor of 
-                Science in Computer Science.</div></li>
+                Science in Computer Science (3.87 GPA).</div></li>
             <li><i class='bx bx-chevron-right'></i><div class="point">I am profcient in many 
                 programming languages including 
                 <span class="highlight">C#</span>, 
@@ -82,7 +87,7 @@
                 certificates in 
                 <span class="highlight">cybersecurity</span> (ISU) and 
                 <span class="highlight">AI and machine learning</span> 
-                (Hot-AML).</div></li>
+                (HoT-AML).</div></li>
             <li><i class='bx bx-chevron-right'></i><div class="point">I am 
                 driven by a love for 
                 <span class="highlight">problem-solving</span> 
@@ -95,8 +100,72 @@
                 <span>Connect with me</span>
             </div>
         </div>
-        
     </section>
+    <!---------- Experience ---------->
+    <section class="Experience" id="experience">
+        <h4 class="section-title">
+            <div class="section-text">/ Experience</div>
+            <div class="line"></div>
+        </h4>
+        <div class="tabbed-interface">
+            <div class="tabs">
+                <button class="tab active" data-tab="tab1">&nbsp;&nbsp;&nbsp;Current</button>
+                <button class="tab" data-tab="tab2">&nbsp;&nbsp;&nbsp;08/2024</button>
+                <button class="tab" data-tab="tab3">&nbsp;&nbsp;&nbsp;01/2024</button>
+            </div>
+            <div class="tab-content active" id="tab1">
+                <h3>Researcher @ ISU</h3>
+                <div class="date">November 2024 - Present</div>
+                <ul class="exp-points">
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Work on an NIH-sponsored project titled "Using integral 
+                        equations to capture spatiotemporal relations in the 
+                        brain".</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Develop and optimze algorithms (Python) for modeling and 
+                        analyzing complex neural data.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Apply theoretical knowledge of ML to real-world problems 
+                        in computational medicine.</div></li>
+                </ul>
+            </div>
+            <div class="tab-content" id="tab2">
+                <h3>Applied AI and ML Trainee @ HoT-AML</h3>
+                <div class="date">August 2024 - December 2024</div>
+                <ul class="exp-points">
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Delved into AI and ML, applying theory to real-world
+                        problems.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Gained hands on experience with AI and ML techniques.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Designed and gine-tuned ML models (Python).</div></li>
+                </ul>
+            </div>
+            <div class="tab-content" id="tab3">
+                <h3>Capstone Student</h3>
+                <div class="date">January 2024 - May 2024</div>
+                <ul class="exp-points">
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Obtained the top project award for outstanding 
+                        visualization and interactivity.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed interactive features for dynamic 
+                        visualization of tree operations.</div></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!---------- Footer ---------->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-gmail' ></i></a>
+            <a href="#"><i class='bx bxl-github' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+
+        <ul class="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p class="copyright">
+            © Alice Giola | All Rights Reserved
+        </p>
+    </footer>
     <!---------- Scripts ---------->
     <script src="scripts.js"></script>
 </body>

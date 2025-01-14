@@ -13,7 +13,9 @@
   --main: #8C96B6;
   --titles: #CCD6F6;
   --accent: #86FFE9;
+  --subtle: #273659;
   --background: #11192E;
+  --background-darker: #0D1424D2;
 }
 
 html {
@@ -34,13 +36,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background: #0d1424d2;
-  width: 15px;
+  background: var(--background-darker);
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  /*border-radius: 10px;*/
+  background: var(--main);
+  border-radius: 10px;
 }
 
 /* ---------- Nav Bar ---------- */
@@ -51,10 +53,10 @@ nav {
   z-index: 1000;
   width: 100%;
   padding: 2rem 14%;
-  background-color: #0d1424d2;
+  background-color: var(--background-darker);
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: right;
+  justify-content: center;
   user-select: none;
 }
 
@@ -105,14 +107,14 @@ nav ul li a.active::after {
 /* ---------- home ---------- */
 section {
   min-height: 100vh;
-  padding: 10rem 15%;
+  padding: 10rem 25%;
 }
 
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15rem;
+  gap: 10rem;
 }
 
 .home-text {
@@ -120,7 +122,6 @@ section {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  justify-content: center;
 }
 
 .home-text .gray {
@@ -220,7 +221,7 @@ section {
 .social-icons a{
   display: inline-flex;
   justify-content: center;
-  align-items: center;
+  line-height: 1;
   font-size: 2rem;
   padding: 1rem;
   background-color: transparent;
@@ -339,8 +340,13 @@ section {
   padding-top: 2rem;
   color: var(--accent);
   opacity: 0;
-  animation: fadeInSlideUp 1s ease forwards;
-  animation-delay: 1.3s;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.connect-container.animate {
+  animation: fadeInSlideUp 0.5s ease forwards;
+  opacity: 1;
 }
 
 .connect-button {
@@ -365,4 +371,157 @@ section {
   transform: scale(1.2);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   transform: translateY(-5px);
+}
+
+/* ---------- Experience ---------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tabbed-interface {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.tabs {
+  justify-content: right;
+  width: 13rem;
+  max-width: 13rem;
+  min-width: 13rem;
+}
+
+.tab {
+  background: none;
+  width: 100%;
+  color: var(--titles);
+  font-size: 2.5rem;
+  font-family: "NTR", serif;
+  text-align: left;
+  border-left: 1px solid var(--main);
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.tab:hover {
+  background-color: var(--subtle); 
+}
+
+.tab.active {
+  border-left: 2px solid var(--accent);
+}
+
+.tab-content {
+  display: none;
+  flex-grow: 1;
+  color: var(--main);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  min-height: 380px;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  flex-grow: 1;
+}
+
+h3 {
+  color: var(--titles);
+  line-height: 1;
+  font-size: 3.3rem;
+}
+
+.date {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.exp-points {
+  list-style: none;
+}
+
+.exp-points li .point {
+  display: block;
+}
+
+.exp-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+.exp-points li i {
+  align-self: flex-start;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #0d1424d2;
+  padding: 20px 0;
+}
+
+.footer .social {
+  text-align: center;
+}
+
+.footer .social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--titles);
+  border-radius: 50%;
+  color: var(--titles);
+  margin: 2rem 0.5rem;
+  transition: 0.3s ease-in-out;
+  -webkit-user-drag: none;
+}
+
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a {
+  color: var(--titles);
+  border-bottom: 3px solid transparent;
+  transition: 0.3 ease-in-out;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
 }

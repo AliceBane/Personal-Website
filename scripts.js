@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.nav');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
     
     function typeText(text, element, delay, nextFunction) {
         let i = 0;
@@ -40,6 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     typeHelloWorld();
 
+    function animateConnectContainer() {
+        if (connectContainer) {
+            connectContainer.classList.add('animate');
+        }
+    }
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -47,11 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     fact.style.animationDelay = `${index * 0.3}s`;
                     fact.classList.add('animate');
                 });
-                console.log('About Section Intersecting:', entry.isIntersecting);
-                console.log('Adding .animate to connectContainer:', connectContainer);
-                connectContainer.classList.add('animate');
-                observer.disconnect();
+            setTimeout(animateConnectContainer, facts.length * 300);
+            observer.disconnect();
             }
+        
         });
       }, { threshold: 0.5 });
       observer.observe(aboutSection);
@@ -70,5 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
             }
         })
-      }
+    }
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.scrollTo({ top: window.scrollY });
+            tabs.forEach((t) => t.classList.remove('active'));
+            tabContents.forEach((content) => {
+                content.classList.remove('active');
+                content.style.opacity = "0";
+            });
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
+        });
+    });
 });
