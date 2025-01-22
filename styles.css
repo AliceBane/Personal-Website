@@ -46,6 +46,17 @@ body {
 }
 
 /* ---------- Nav Bar ---------- */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -72,8 +83,11 @@ nav ul li a {
   font-size: 2.3rem;
   font-weight: 700;
   position: relative;
-  transition: 0.3 ease-in-out;
   -webkit-user-drag: none;
+  opacity: 0;
+  transition: 0.3 ease-in-out;
+  animation: fadeInSlideDown 0.5s ease-in-out forwards;
+  animation-fill-mode: forwards;
 }
 
 nav ul li a:hover,
@@ -104,6 +118,26 @@ nav ul li a.active::after {
   display: none;
 }
 
+nav ul li:nth-child(1) a {
+  animation-delay: 1.2s;
+}
+
+nav ul li:nth-child(2) a {
+  animation-delay: 1.4s;
+}
+
+nav ul li:nth-child(3) a {
+  animation-delay: 1.6s;
+}
+
+nav ul li:nth-child(4) a {
+  animation-delay: 1.8s;
+}
+
+nav ul li:nth-child(5) a {
+  animation-delay: 2s;
+}
+
 /* ---------- home ---------- */
 section {
   min-height: 100vh;
@@ -122,6 +156,11 @@ section {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+}
+
+.home-text .hidden-ph {
+  height: 20rem;
+  width: 43.5rem;
 }
 
 .home-text .gray {
@@ -143,8 +182,10 @@ section {
   text-wrap: nowrap;
 }
 
-.home-text .intro {
-  font-size: 1.5rem;
+#intro {
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 #same-line {
@@ -154,6 +195,8 @@ section {
 
 .home-img{
   border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .home-img img{
@@ -193,7 +236,7 @@ section {
 }
 
 .CV-button {
-  display: inline-block;
+  display: inline-flex;
   color: var(--accent);
   border: 2px solid var(--accent);
   border-radius: 40px;
@@ -202,20 +245,14 @@ section {
   cursor: pointer;
   outline: none;
   padding: 0.3rem 2rem;
-  max-width: 90%;
-  transform: translateY(0px);
-  transition: all 0.5s ease;
   text-wrap: nowrap;
   user-select: none;
   -webkit-user-drag: none;
-}
-
-.CV-button:hover {
-  background-color: var(--accent);
-  color: var(--background);
-  transform: scale(1.2);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  transform: translateY(-5px);
+  opacity: 0;
+  transform: translateY(0);
+  animation: FadeInSlideUp 0.5s ease-in-out forwards;
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a{
@@ -229,26 +266,47 @@ section {
   border-radius: 50%;
   color: var(--accent);
   margin: 3rem 0.5rem;
-  transition: 0.3s ease-in-out;
   -webkit-user-drag: none;
 }
 
-.social-icons a:hover {
-  color: var(--background);
+.CV-button, .social-icons a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.CV-button:hover, .social-icons a:hover {
   background-color: var(--accent);
-  transform: scale(1.2);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  color: var(--background);
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.CV-button:nth-child(1) {
+  animation-delay: 2.2s;
+}
+
+
+.social-icons a:nth-child(1) {
+  animation-delay: 2.4s;
+}
+
+
+.social-icons a:nth-child(2) {
+  animation-delay: 2.6s;
+}
+
+
+.social-icons a:nth-child(3) {
+  animation-delay: 2.8s;
 }
 
 /* ---------- Sections ---------- */
 .section-title {
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   flex-direction: row;
-  gap: 2rem;
   white-space: nowrap;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -276,17 +334,6 @@ section {
 
 .facts {
   list-style: none;
-}
-
-@keyframes slideUpFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .facts li .point {
@@ -319,10 +366,10 @@ section {
 }
 
 .facts li.animate {
-  animation: slideUpFadeIn 0.5s ease-in forwards;
+  animation: FadeInSlideUp 0.5s ease-in forwards;
 }
 
-@keyframes fadeInSlideUp {
+@keyframes FadeInSlideUp {
   0% {
       opacity: 0;
       transform: translateY(20px);
@@ -345,7 +392,7 @@ section {
 }
 
 .connect-container.animate {
-  animation: fadeInSlideUp 0.5s ease forwards;
+  animation: FadeInSlideUp 0.5s ease forwards;
   opacity: 1;
 }
 
@@ -388,15 +435,13 @@ section {
 #experience {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .tabbed-interface {
   display: flex;
   gap: 2rem;
-  width: 100%;
 }
 
 .tabs {
