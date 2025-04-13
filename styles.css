@@ -216,10 +216,11 @@ section {
   /* display: inline-block;
   margin: 1rem o; */
 
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
-  gap: 0.3rem;
-  flex-wrap: nowrap;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 8rem;
 }
 
 .home-img{
@@ -251,7 +252,7 @@ section {
 }
 
 .blinking-cursor {
-  display: inline;
+  display: inline-block;
   animation: blink 1s step-start infinite;
   color: var(--titles);
   font-size: 80px;
