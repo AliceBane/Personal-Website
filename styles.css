@@ -1,255 +1,862 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alicegiola.com</title>
-    <link href="https://fonts.googleapis.com/css2?family=NTR:wght@400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bungee+Inline&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=NTR&family=Overpass+Mono:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <!---------- Nav bar ---------->
-    <div class="navbar">
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#home" id="contact-link">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="Alice Giola CV.pdf" download class="nav-cv-button">Download CV</a>
-    </div>
+/* ---------- General ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
 
-    <!---------- Home ---------->
-    <section class="home" id="home">
-        <div class="home-text">
-            <div class="hidden-ph">
-                <h1 id="hello-world" class="gray"></h1>
-                <div id="same-line">
-                    <span id="alice-here" class="aqua"></span>
-                    <span id="and-here" class="gray"></span>
-                    <span class="blinking-cursor">|</span>
-                </div>
-            </div>
-            <span id="intro">
-                I am a passionate programmer with a deep interest in all things technology. Currently, I am working as a researcher at Idaho State University. My goal is to contribute to projects that use modern technologies to solve real-world problems.
-            </span>
-            <div class="buttons-container" id="highlight-target">
-                <div class="CV-button">
-                    <a href="#">Download CV</a><!--<i class='bx bx-download'></i>-->
-                </div>
-                <div class="social-icons">
-                    <a href="mailto:alix.giola03@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-gmail' ></i>
-                    </a>
-                    <a href="https://github.com/AliceBane" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-github' ></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alice-giola-68ba762aa/" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-linkedin-square' ></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="home-img">
-            <img src="Alice Cyan - Cropped.jpg" alt="">
-        </div>
-    </section>
-    
-    <!---------- About section ---------->
-    <section class="about" id="about">
-        <h2 class="section-title">
-            <div class="section-text">/ About me</div>
-            <div class="line"></div>
-        </h2>
-        <ul class="facts">
-            <li><i class='bx bx-chevron-right'></i><div class="point">I am an aspiring 
-                <span class="highlight">software engineer</span> 
-                based in Pocatello, Idaho, with a Bachelor of 
-                Science in Computer Science (3.87 GPA).</div></li>
-            <li><i class='bx bx-chevron-right'></i><div class="point">I am profcient in many 
-                programming languages including 
-                <span class="highlight">C#</span>, 
-                <span class="highlight">Python</span>, 
-                <span class="highlight">Java</span> and 
-                <span class="highlight">SQL</span> (4+ years of experience) 
-                and enjoy working on both 
-                <span class="highlight">back-end</span> and 
-                <span class="highlight">front-end</span>.</div></li>
-            <li><i class='bx bx-chevron-right'></i><div class="point">I have obtained academic 
-                certificates in 
-                <span class="highlight">cybersecurity</span> (ISU) and 
-                <span class="highlight">AI and machine learning</span> 
-                (HoT-AML).</div></li>
-            <li><i class='bx bx-chevron-right'></i><div class="point">I am 
-                driven by a love for 
-                <span class="highlight">problem-solving</span> 
-                and a keen intereset in artificial intelligence and all 
-                things coding.</div></li>
-        </ul>
-        <div class="connect-container">
-            <h4>Let's create something impactful together.</h4>
-            <div class="connect-button">
-                <a href="#home" id="contact-link">Contact</a>
-            </div>
-        </div>
-    </section>
-    <!---------- Experience ---------->
-    <section class="Experience" id="experience">
-        <h4 class="section-title">
-            <div class="section-text">/ Experience</div>
-            <div class="line"></div>
-        </h4>
-        <div class="tabbed-interface">
-            <div class="tabs">
-                <button class="tab active" data-tab="tab1">&nbsp;&nbsp;&nbsp;NIH</button>
-                <button class="tab " data-tab="tab2">&nbsp;&nbsp;&nbsp;NIH</button>
-                <button class="tab" data-tab="tab3">&nbsp;&nbsp;&nbsp;HoT-AML</button>
-                <button class="tab" data-tab="tab4">&nbsp;&nbsp;&nbsp;ISU</button>
-            </div>
-            <div class="tab-content active" id="tab1">
-                <h3>ML & Spectroscopy Research Assistant @ NIH</h3>
-                <div class="date">January 2025 - Present</div>
-                <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Implemented CNN & feedforward models for spectroscopy 
-                        dataset analysis using Python, PyTorch, NumPy, Matplotlib.
-                    </div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed a data preprocessing pipeline for 
-                        spectroscopy analysis, improving signal extraction and reducing noise.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Conducted statistical validation to ensure 
-                        model reproducibility and accuracy.</div></li>
-                </ul>
-            </div>
-            <div class="tab-content" id="tab2">
-                <h3>ML & Neural Activity Research Assistant @ NIH</h3>
-                <div class="date">November 2024 - Present</div>
-                <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed Python-based ML models for neural activity 
-                        prediction, utilizing NumPy, SciPy, TensorFlow.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Processed and analyzed EEG data, applying ML algorithms 
-                        to identify spatiotemporal patterns in neural activity.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Utilized PyTorch, PCA, Sklearn, and custom neural 
-                        network architectures to analyze EEG data and optimize model accuracy.</div></li>
-                </ul>
-            </div>
-            <div class="tab-content" id="tab3">
-                <h3>Applied AI and ML Trainee @ HoT-AML</h3>
-                <div class="date">August 2024 - December 2024</div>
-                <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Trained and optimized deep learning models using PyTorch, 
-                        improving model accuracy.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Gained hands-on experience with AI and ML techniques, 
-                        tailored to address real-world applications.</div></li>
-                </ul>
-            </div>
-            <div class="tab-content" id="tab4">
-                <h3>Capstone Student</h3>
-                <div class="date">January 2024 - May 2024</div>
-                <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Obtained the top project award for outstanding 
-                        visualization and interactivity.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed interactive features for dynamic 
-                        visualization of tree operations.</div></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!---------- Projects ---------->
-    <section class="projects" id="projects">
-        <h4 class="section-title">
-            <div class="section-text">/ Projects</div>
-            <div class="line"></div>
-        </h4>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="proj-btn-container">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-github' ></i>
-                    </a>
-                </div>
-                <h3>B+Tree Visualizer</h3>
-                <p>A visual application for B-Trees and B+Trees to facilitate the understanding of 
-                    their operations and efficiencies for future students.</p>
-                <ul class="tech-list">
-                    <li>C#</li>
-                    <li>DJango</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <div class="proj-btn-container">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-github' ></i>
-                    </a>
-                </div>
-                <h3>Space Invaders Video Game</h3>
-                <p>Custom version of Space Invaders game, with unique features and challenges.</p>
-                <ul class="tech-list">
-                    <li>C#</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <div class="proj-btn-container">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-github' ></i>
-                    </a>
-                </div>
-                <h3>TSP Solver</h3>
-                <p>Travelling salesman problem solver application that uses an optimized Greedy 
-                    algorithm using 4-Opt Local Search.</p>
-                <ul class="tech-list">
-                    <li>Python</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <div class="proj-btn-container">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bxl-github' ></i>
-                    </a>
-                </div>
-                <h3>Album Collection Manager</h3>
-                <p>Database system supporting full 
-                    CRUD operations for organizing musical records.</p>
-                <ul class="tech-list">
-                    <li>SQL</li>
-                    <li>Python</li>
-                </ul>
-            </div>
-        </div>
-        <div class="see-more-btn">
-            <a href="https://github.com/AliceBane?tab=repositories" target="_blank" rel="noopener noreferrer">See more</a>
-        </div>
-    </section>
-    <!---------- Footer ---------->
-    <footer class="footer">
-        <div class="social">
-            <a href="mailto:alix.giola03@gmail.com" target="_blank" rel="noopener noreferrer"><i class='bx bxl-gmail' ></i></a>
-            <a href="https://github.com/AliceBane" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
-            <a href="https://www.linkedin.com/in/alice-giola-68ba762aa/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin-square' ></i></a>
-        </div>
+:root {
+  --main: #8C96B6;
+  --titles: #CCD6F6;
+  --accent: #86FFE9;
+  --subtle: #273659;
+  --background-lighter: #17223E;
+  --background: #11192E;
+  --background-darker: #0D1424D2;
+}
 
-        <ul class="list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#home" id="contact-link">Contact</a></li>
-        </ul>
-        <p class="copyright">
-            © Alice Giola | All Rights Reserved
-        </p>
-    </footer>
-    <!---------- Scripts ---------->
-    <script src="scripts.js"></script>
-</body>
-</html>
+html {
+  overflow-x: hidden;
+  font-size: 60%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--main);
+
+  font-size: 2.5rem;
+  font-family: "NTR", serif;
+}
+
+::selection {
+  background: #4a8c96;
+  color: var(--background);
+}
+
+::-webkit-scrollbar {
+  background: var(--background-darker);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+  border-radius: 10px;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Nav Bar ---------- */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 2rem 14%;
+  background-color: var(--background-darker);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 1.3rem;
+}
+
+nav ul li a {
+  color: var(--titles);
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-weight: 700;
+  position: relative;
+  -webkit-user-drag: none;
+  opacity: 0;
+  transition: 0.3 ease-in-out;
+  animation: fadeInSlideDown 0.5s ease-in-out forwards;
+  animation-fill-mode: forwards;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--accent);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  position: absolute;
+  left: 50%;
+  bottom: +6px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+#menu-icon {
+  color: var(--titles);
+  font-size: 3.5rem;
+  display: none;
+}
+
+.nav-cv-button {
+  display: inline-block;
+  position: absolute;
+  right: 4rem;
+  transform: translateY(-3px);
+  background-color: transparent;
+  color: var(--titles);
+  font-size: 2.3rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-cv-button:hover {
+  color: var(--accent);
+}
+
+nav ul li:nth-child(1) a {
+  animation-delay: 1.2s;
+}
+
+nav ul li:nth-child(2) a {
+  animation-delay: 1.4s;
+}
+
+nav ul li:nth-child(3) a {
+  animation-delay: 1.6s;
+}
+
+nav ul li:nth-child(4) a {
+  animation-delay: 1.8s;
+}
+
+nav ul li:nth-child(5) a {
+  animation-delay: 2s;
+}
+
+/* ---------- home ---------- */
+section {
+  min-height: 100vh;
+  padding: 10rem 25%;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.home-text .hidden-ph {
+  height: 20rem;
+  width: 43.5rem;
+}
+
+.home-text .gray {
+  color: var(--titles);
+  font-family: "Inter", serif;
+  margin-top: 1.5rem;
+}
+
+.home-text .aqua {
+  color: var(--accent);
+  font-family: "Inter", serif;
+  text-wrap: nowrap;
+}
+
+.home-text .gray, .home-text .aqua {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-wrap: nowrap;
+}
+
+#intro {
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#same-line {
+  display: inline-block;
+  margin: 1rem o;
+}
+
+.home-img{
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.home-img img{
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--accent);
+  transition: 0.2s ease-in-out;
+  max-width: 60rem;
+}
+
+.home-img img:hover{
+  box-shadow: 0 0 15px var(--accent),
+              0 0 50px var(--accent);
+  transform: scale(1.05);
+}
+
+/* ---------- Blinking cursor ---------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blinking-cursor {
+  display: inline;
+  animation: blink 1s step-start infinite;
+  color: var(--titles);
+  font-size: 80px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ---------- Buttons ---------- */
+@keyframes FadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+@keyframes highlightGlow {
+  0% { box-shadow: 0 0 10px rgba(134, 255, 233, 0);}
+  50% { box-shadow: 0 0 25px rgba(134, 255, 233, 1);}
+  100% { box-shadow: 0 0 10px rgba(134, 255, 233, 0);}
+}
+
+.highlight-effect {
+  position: relative;
+}
+
+.highlight-effect::before {
+  content: " ";
+  position: absolute;
+  inset: 0 -3rem;
+  border-radius: 50px;
+  padding: 0 3rem;
+  opacity: 1;
+  animation: highlightGlow 1s ease-in-out infinite alternate;
+}
+
+.highlight-effect.active::before {
+  opacity: 1;
+  animation: highlightGlow 1 s ease-in-out infinite alternate;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.CV-button a{
+  text-decoration: none;
+  display: inline-flex;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 40px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  padding: 0.3rem 2rem;
+  text-wrap: nowrap;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  margin: 3rem 0.5rem;
+  -webkit-user-drag: none;
+}
+
+.CV-button a, .social-icons a {
+  opacity: 0;
+  animation: FadeIn 0.5s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.CV-button a:hover, .social-icons a:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.buttons-container .CV-button a{
+  animation-delay: 2.2s;
+}
+
+.buttons-container .social-icons a:nth-child(1) {
+  animation-delay: 2.4s;
+}
+
+.social-icons a:nth-child(2) {
+  animation-delay: 2.6s;
+}
+
+.social-icons a:nth-child(3) {
+  animation-delay: 2.8s;
+}
+
+/* ---------- Sections ---------- */
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
+  gap: 2rem;
+  width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.section-text {
+  color: var(--titles);
+  font-size: 5rem;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--titles);
+}
+
+/* ---------- About ---------- */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 250rem;
+  margin: 0 auto;
+}
+
+.facts {
+  list-style: none;
+}
+
+.facts li .point {
+  display: block;
+}
+
+.facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.facts li span.highlight {
+  color: var(--titles);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: inline;
+  line-height: inherit;
+}
+
+.facts li i {
+  align-self: flex-start;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.facts li.animate {
+  animation: FadeInSlideUp 0.5s ease-in forwards;
+}
+
+@keyframes FadeInSlideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.connect-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.connect-container.animate {
+  animation: FadeInSlideUp 0.5s ease forwards;
+  opacity: 1;
+}
+
+.connect-button {
+  display: inline-flex;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding: 0.3rem 2rem;
+  transition: all 0.5s ease;
+  text-wrap: nowrap;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.connect-button:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transform: translateY(-5px);
+}
+
+/* ---------- Experience ---------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 230rem;
+  margin: 0 auto;
+}
+
+.tabbed-interface {
+  display: flex;
+  gap: 2rem;
+}
+
+.tabs {
+  justify-content: right;
+  width: 13rem;
+  max-width: 13rem;
+  min-width: 13rem;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.tab {
+  background: none;
+  width: 100%;
+  color: var(--titles);
+  font-size: 2.5rem;
+  font-family: "NTR", serif;
+  text-align: left;
+  border-left: 1px solid var(--main);
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.tab:hover {
+  background-color: var(--subtle); 
+}
+
+.tab.active {
+  border-left: 3px solid var(--accent);
+}
+
+.tab-content {
+  display: none;
+  flex-grow: 1;
+  color: var(--main);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  min-height: 380px;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  flex-grow: 1;
+}
+
+h3 {
+  color: var(--titles);
+  line-height: 1;
+  font-size: 3.3rem;
+}
+
+.date {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.exp-points {
+  list-style: none;
+}
+
+.exp-points li .point {
+  display: block;
+}
+
+.exp-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+.exp-points li i {
+  align-self: flex-start;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* ---------- Projects ---------- */
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 250rem;
+  margin: 0 auto;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+  padding-bottom: 3rem;
+}
+
+.project-card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--background-lighter);
+  border-radius: 2rem;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  transition: 0.3s ease;
+  position: relative;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-card .proj-btn-container {
+  color: var(--accent);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 3px rgba(13, 20, 36, 0.2),
+              0 5px 1px rgba(13, 20, 36, 0.3),
+              0 15px 5px rgba(13, 20, 36, 0.1);
+}
+
+.project-card:hover .proj-btn-container {
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out;
+}
+.project-card:hover h3 {
+  color: var(--accent);
+}
+
+.project-card:hover .tech-list {
+  color: var(--titles);
+}
+
+.proj-btn-container {
+  color: var(--main);
+  font-size: 3rem;
+  line-height: 0;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.project-card h3 {
+  font-size: 3rem;
+  padding-top: 5rem;
+  text-align: left;
+}
+
+.project-card p {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-family: "Overpass Mono", serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  margin-top: auto;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding: 0.3rem 2rem;
+  transition: all 0.5s ease;
+  text-wrap: nowrap;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.see-more-btn:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transform: translateY(-5px);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #0d1424d2;
+  padding: 20px 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.footer .social {
+  text-align: center;
+  background-color: #0d1424d2;
+}
+
+.footer .social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--main);
+  border-radius: 50%;
+  color: var(--main);
+  margin: 2rem 0.5rem;
+  transition: 0.3s ease-in-out;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.footer .social a:hover {
+  color: var(--titles);
+  border: 2px solid var(--titles);
+}
+
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a {
+  color: var(--main);
+  border-bottom: 3px solid transparent;
+  transition: 0.3 ease-in-out;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.footer ul li a:hover {
+  transition: 0.3s ease-in-out;
+  color: var(--titles);
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media(max-width:1285px){
+  #menu-icon{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  nav{
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: var(--background-darker);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    flex-direction: column;
+    display: flex;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--titles)
+  }
+
+  nav ul li{
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav.active{
+    display: block;
+    transform: translateX(0);
+  }
+
+  nav-cv-button {
+    display: none'
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+
+  .home-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 56 wv;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+}
