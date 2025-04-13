@@ -213,8 +213,13 @@ section {
 }
 
 #same-line {
-  display: inline-block;
-  margin: 1rem o;
+  /* display: inline-block;
+  margin: 1rem o; */
+
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  flex-wrap: nowrap;
 }
 
 .home-img{
