@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alicegiola.com</title>
     <link href="https://fonts.googleapis.com/css2?family=NTR:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bungee+Inline&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=NTR&family=Overpass+Mono:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +25,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" id="contact-link">Contact</a></li>
             </ul>
         </nav>
-        <div class="CV-button">
-            <span>Download CV</span>
-        </div>
+        <a href="Alice Giola CV.pdf" download class="nav-cv-button">Download CV</a>
     </div>
 
     <!---------- Home ---------->
@@ -43,18 +45,18 @@
             <span id="intro">
                 I am a passionate programmer with a deep interest in all things technology. Currently, I am working as a researcher at Idaho State University. My goal is to contribute to projects that use modern technologies to solve real-world problems.
             </span>
-            <div class="buttons-container">
+            <div class="buttons-container" id="highlight-target">
                 <div class="CV-button">
-                    <span>Download CV </span><!--<i class='bx bx-download'></i>-->
+                    <a href="#">Download CV</a><!--<i class='bx bx-download'></i>-->
                 </div>
                 <div class="social-icons">
-                    <a href="#">
+                    <a href="mailto:alix.giola03@gmail.com" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-gmail' ></i>
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/AliceBane" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-github' ></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/alice-giola-68ba762aa/" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-linkedin-square' ></i>
                     </a>
                 </div>
@@ -99,7 +101,7 @@
         <div class="connect-container">
             <h4>Let's create something impactful together.</h4>
             <div class="connect-button">
-                <span>Connect with me</span>
+                <a href="#home" id="contact-link">Contact</a>
             </div>
         </div>
     </section>
@@ -111,34 +113,47 @@
         </h4>
         <div class="tabbed-interface">
             <div class="tabs">
-                <button class="tab active" data-tab="tab1">&nbsp;&nbsp;&nbsp;Current</button>
-                <button class="tab" data-tab="tab2">&nbsp;&nbsp;&nbsp;08/2024</button>
-                <button class="tab" data-tab="tab3">&nbsp;&nbsp;&nbsp;01/2024</button>
+                <button class="tab active" data-tab="tab1">&nbsp;&nbsp;&nbsp;NIH</button>
+                <button class="tab " data-tab="tab2">&nbsp;&nbsp;&nbsp;NIH</button>
+                <button class="tab" data-tab="tab3">&nbsp;&nbsp;&nbsp;HoT-AML</button>
+                <button class="tab" data-tab="tab4">&nbsp;&nbsp;&nbsp;ISU</button>
             </div>
             <div class="tab-content active" id="tab1">
-                <h3>Researcher @ ISU</h3>
-                <div class="date">November 2024 - Present</div>
+                <h3>ML & Spectroscopy Research Assistant @ NIH</h3>
+                <div class="date">January 2025 - Present</div>
                 <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Work on an NIH-sponsored project titled "Using integral 
-                        equations to capture spatiotemporal relations in the 
-                        brain".</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Develop and optimze algorithms (Python) for modeling and 
-                        analyzing complex neural data.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Apply theoretical knowledge of ML to real-world problems 
-                        in computational medicine.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Implemented CNN & feedforward models for spectroscopy 
+                        dataset analysis using Python, PyTorch, NumPy, Matplotlib.
+                    </div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed a data preprocessing pipeline for 
+                        spectroscopy analysis, improving signal extraction and reducing noise.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Conducted statistical validation to ensure 
+                        model reproducibility and accuracy.</div></li>
                 </ul>
             </div>
             <div class="tab-content" id="tab2">
-                <h3>Applied AI and ML Trainee @ HoT-AML</h3>
-                <div class="date">August 2024 - December 2024</div>
+                <h3>ML & Neural Activity Research Assistant @ NIH</h3>
+                <div class="date">November 2024 - Present</div>
                 <ul class="exp-points">
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Delved into AI and ML, applying theory to real-world
-                        problems.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Gained hands on experience with AI and ML techniques.</div></li>
-                    <li><i class='bx bx-chevron-right'></i><div class="point">Designed and gine-tuned ML models (Python).</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Developed Python-based ML models for neural activity 
+                        prediction, utilizing NumPy, SciPy, TensorFlow.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Processed and analyzed EEG data, applying ML algorithms 
+                        to identify spatiotemporal patterns in neural activity.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Utilized PyTorch, PCA, Sklearn, and custom neural 
+                        network architectures to analyze EEG data and optimize model accuracy.</div></li>
                 </ul>
             </div>
             <div class="tab-content" id="tab3">
+                <h3>Applied AI and ML Trainee @ HoT-AML</h3>
+                <div class="date">August 2024 - December 2024</div>
+                <ul class="exp-points">
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Trained and optimized deep learning models using PyTorch, 
+                        improving model accuracy.</div></li>
+                    <li><i class='bx bx-chevron-right'></i><div class="point">Gained hands-on experience with AI and ML techniques, 
+                        tailored to address real-world applications.</div></li>
+                </ul>
+            </div>
+            <div class="tab-content" id="tab4">
                 <h3>Capstone Student</h3>
                 <div class="date">January 2024 - May 2024</div>
                 <ul class="exp-points">
@@ -150,19 +165,85 @@
             </div>
         </div>
     </section>
+    <!---------- Projects ---------->
+    <section class="projects" id="projects">
+        <h4 class="section-title">
+            <div class="section-text">/ Projects</div>
+            <div class="line"></div>
+        </h4>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="proj-btn-container">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <h3>B+Tree Visualizer</h3>
+                <p>A visual application for B-Trees and B+Trees to facilitate the understanding of 
+                    their operations and efficiencies for future students.</p>
+                <ul class="tech-list">
+                    <li>C#</li>
+                    <li>DJango</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <div class="proj-btn-container">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <h3>Space Invaders Video Game</h3>
+                <p>Custom version of Space Invaders game, with unique features and challenges.</p>
+                <ul class="tech-list">
+                    <li>C#</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <div class="proj-btn-container">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <h3>TSP Solver</h3>
+                <p>Travelling salesman problem solver application that uses an optimized Greedy 
+                    algorithm using 4-Opt Local Search.</p>
+                <ul class="tech-list">
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <div class="proj-btn-container">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <h3>Album Collection Manager</h3>
+                <p>Database system supporting full 
+                    CRUD operations for organizing musical records.</p>
+                <ul class="tech-list">
+                    <li>SQL</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+        <div class="see-more-btn">
+            <a href="https://github.com/AliceBane?tab=repositories" target="_blank" rel="noopener noreferrer">See more</a>
+        </div>
+    </section>
     <!---------- Footer ---------->
     <footer class="footer">
         <div class="social">
-            <a href="#"><i class='bx bxl-gmail' ></i></a>
-            <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="mailto:alix.giola03@gmail.com" target="_blank" rel="noopener noreferrer"><i class='bx bxl-gmail' ></i></a>
+            <a href="https://github.com/AliceBane" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/alice-giola-68ba762aa/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin-square' ></i></a>
         </div>
 
         <ul class="list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#home" id="contact-link">Contact</a></li>
         </ul>
         <p class="copyright">
             © Alice Giola | All Rights Reserved

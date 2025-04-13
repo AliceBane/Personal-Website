@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a');
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
+    const connectButtons = document.querySelectorAll(".connect-button a, #contact-link");
+    const targetButton = document.getElementById("highlight-target");
+    const menuIcon = document.getElementById('menu-icon');
+    const nav = document.querySelector('nav');
     
     function typeText(text, element, delay, nextFunction) {
         let i = 0;
@@ -92,5 +96,22 @@ document.addEventListener('DOMContentLoaded', function() {
             tab.classList.add('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
         });
+    });
+
+    connectButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+            if (!targetButton) return;
+            targetButton.classList.add("highlight-effect", "active");
+            
+            setTimeout(() => {
+                targetButton.classList.remove("highlight-effect", "active");
+            }, 2000);
+        });
+    });
+
+    menuIcon.addEventListener('click', () => {
+        nav.classList.toggle('active');
     });
 });
