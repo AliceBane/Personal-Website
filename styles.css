@@ -822,8 +822,10 @@ h3 {
   nav ul li a {
     display: block;
     font-size: 2rem;
-    margin: 2rem 0;
-    color: var(--titles)
+    margin: 0rem 0;
+    color: var(--titles);
+    animation-delay: 0s !important;
+    transition-delay: 0s !important;
   }
 
   nav ul li{
@@ -837,7 +839,7 @@ h3 {
   }
 
   nav-cv-button {
-    display: none'
+    display: none;
   }
 
   .home {
