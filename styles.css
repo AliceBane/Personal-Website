@@ -787,7 +787,16 @@ h3 {
 }
 
 @media(max-width:768px){
-  #menu-icon{
+
+  html {
+    font-size: 50% !important;
+  }
+
+  section {
+    padding: 6rem 5rem;
+  }
+
+  #menu-icon {
     display: block;
     position: fixed;
     right: 1rem;
@@ -800,7 +809,7 @@ h3 {
     position: relative;
   }
 
-  nav{
+  nav {
     position: fixed;
     z-index: 1000;
     top: 100%;
