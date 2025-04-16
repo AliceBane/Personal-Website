@@ -793,7 +793,7 @@ h3 {
   }
 
   section {
-    padding: 6rem 5rem;
+    padding: 6rem 4rem;
   }
 
   #menu-icon {
@@ -870,4 +870,68 @@ h3 {
     flex-direction: column-reverse;
   }
 
+  .tabbed-interface {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabs {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab {
+    font-size: 1.8rem;
+    text-align: center;
+    flex: 1;
+    border-left: none;
+    border-bottom: 2px solid var(--main);
+  }
+
+  .tab.active {
+    border-bottom: 3px solid var(--accent);
+    border-left: none;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    padding: 12rem 7rem 6rem;
+    width: 100%;
+    max-width: 90vw;
+  }
+  
+  .project-card h3 {
+    font-size: 4rem;
+    padding-top: 6rem;
+  }
+  
+  .project-card p {
+    font-size: 3rem;
+    line-height: 2;
+  }
+  
+  .tech-list {
+    font-size: 2rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .proj-btn-container {
+    font-size: 6rem;
+    top: 5rem;
+    right: 5rem;
+  }
+
+  .see-more-btn {
+    margin-top: 3rem;
+  }
 }
