@@ -66,7 +66,7 @@ a {
 nav {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1000;
   width: 100%;
   padding: 2rem 14%;
@@ -726,6 +726,7 @@ h3 {
   padding: 20px 0;
   user-select: none;
   -webkit-user-drag: none;
+  width: 100%;
 }
 
 .footer .social {
@@ -789,7 +790,7 @@ h3 {
 @media(max-width:1285px){
   #menu-icon{
     display: block;
-    position: absolute;
+    position: fixed;
     right: 1rem;
     top: 1rem;
     z-index: 1100;
@@ -801,12 +802,12 @@ h3 {
   }
 
   nav{
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     top: 100%;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 20%;
     padding: 1rem 3rem;
     background: var(--background-darker);
     border-bottom-left-radius: 2rem;
@@ -822,7 +823,7 @@ h3 {
   nav ul li a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
     color: var(--titles)
   }
 
