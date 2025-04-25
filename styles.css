@@ -991,11 +991,11 @@ h3 {
   
   .project-card h3 {
     font-size: 3rem;
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
   
   .project-card p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2;
   }
   
@@ -1007,8 +1007,8 @@ h3 {
 
   .proj-btn-container {
     font-size: 5rem;
-    top: 4rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
   }
 
   .see-more-btn {
