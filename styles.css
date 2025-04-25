@@ -63,6 +63,38 @@ a {
   }
 }
 
+.nav-cv-button {
+  position: fixed !important;
+  top: 2.3rem;
+  left: 2rem;
+
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--accent) !important;
+  border: 2px solid var(--accent) !important;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0rem 2rem !important;
+  background-color: transparent;
+  white-space: nowrap;
+  max-width: fit-content;
+
+  cursor: pointer;
+  z-index: 1050;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-cv-button:hover {
+  background-color: var(--accent);
+  color: var(--background) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -796,6 +828,38 @@ h3 {
     padding: 6rem 4rem;
   }
 
+  .nav-cv-button {
+    position: fixed;
+    top: 3.5rem;
+    left: 2rem;
+  
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.3rem 2rem;
+    background-color: transparent;
+    white-space: nowrap;
+    max-width: fit-content;
+  
+    cursor: pointer;
+    z-index: 1050;
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-cv-button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+
   #menu-icon {
     display: block;
     position: fixed;
@@ -803,16 +867,28 @@ h3 {
     top: 1rem;
     z-index: 1100;
     cursor: pointer;
+    font-size: 7rem;
+    align-items: center;
+    top: 2rem;
   }
 
   .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--background-darker);
+    backdrop-filter: blur(10px);
+    padding: 5.5rem 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   nav {
     position: fixed;
     z-index: 1000;
-    top: 100%;
     top: 0;
     right: 0;
     width: 50%;
@@ -840,6 +916,10 @@ h3 {
   nav ul li{
     display: flex;
     flex-direction: column;
+  }
+
+  nav ul li:first-child {
+    margin-top: 7rem;
   }
 
   nav.active{
