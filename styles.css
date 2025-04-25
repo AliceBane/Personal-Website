@@ -946,6 +946,11 @@ h3 {
     width: 56vw;
   }
 
+  #intro {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .about {
     flex-direction: column-reverse;
   }
