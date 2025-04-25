@@ -990,17 +990,17 @@ h3 {
   }
   
   .project-card h3 {
-    font-size: 4rem;
+    font-size: 2rem;
     padding-top: 6rem;
   }
   
   .project-card p {
-    font-size: 3rem;
+    font-size: 1.5rem;
     line-height: 2;
   }
   
   .tech-list {
-    font-size: 2rem;
+    font-size: 1rem;
     gap: 1.2rem;
     flex-wrap: wrap;
   }
