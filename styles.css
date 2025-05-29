@@ -754,7 +754,7 @@ h3 {
 
 /* ---------- Footer ---------- */
 .footer {
-  background-color: #0d1424d2;
+  background-color: #0f1729;
   padding: 20px 0;
   user-select: none;
   -webkit-user-drag: none;
@@ -762,7 +762,6 @@ h3 {
 
 .footer .social {
   text-align: center;
-  background-color: #0d1424d2;
 }
 
 .footer .social a {
@@ -771,7 +770,6 @@ h3 {
   align-items: center;
   font-size: 2rem;
   padding: 1rem;
-  background-color: transparent;
   border: 2px solid var(--main);
   border-radius: 50%;
   color: var(--main);
